@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.mainBox {
+  background-image: url("background-photo.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  height: 100vh;
+
+  .header {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background: green;
+    align-items: center;
+
+    &__main-page {
+      color: white;
+      padding: 10px 20px;
+      border: 1px solid white;
+      cursor: pointer;
+
+      a {
+        color: white;
+        text-decoration: none;
+        list-style-type: none;
+      }
+    }
+
+    &__menu {
+      flex-direction: column;
+      background: green;
+      position: absolute;
+      right: 0;
+      top: 60px;
+      text-align: center;
+
+      ul {
+        li {
+          list-style-type: none;
+          padding: 15px 20px;
+          border-bottom: 1px solid white;
+          font-size: 20px;
+
+          &:last-child {
+            border-bottom: initial;
+          }
+
+          a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 70px;
+          }
+        }
+      }
+    }
+
+    &__hamburger {
+      display: block;
+      cursor: pointer;
+      z-index: 1;
+
+      span {
+        display: block;
+        width: 33px;
+        height: 4px;
+        margin-bottom: 5px;
+        position: relative;
+        background: #cdcdcd;
+        border-radius: 3px;
+        z-index: 1;
+        transform-origin: 4px 0px;
+
+
+      }
+    }
+  }
+}
+
+.findRestaurants {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+
+  .restaurants {
+    display: inline-flex;
+    flex-direction: column;
+    background: white;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    text-align: center;
+
+    &__localization {
+      font-size: 35px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    &__name {
+      border-top: 1px solid;
+      padding-top: 40px;
+      font-size: 25px;
+      margin-bottom: 40px;
+    }
+
+    &__free-places {
+      color: gray;
+      margin-bottom: 30px;
+    }
+
+    &__number {
+      background: green;
+      color: red;
+      font-weight: bold;
+      font-size: 20px;
+      padding: 10px 30px;
+      text-align: center;
+    }
+
+    &__slider {
+      display: flex;
+    }
+
+    &__restaurant {
+      border: 1px solid;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 190px;
+      padding: 30px 10px;
+      margin: 30px 20px;
+
+      img {
+        padding: 50px 0;
+      }
+    }
+
+    &__search {
+      display: flex;
+      p {
+        display: flex;
+        margin-right: 10px;
+        padding: 10px 20px;
+        border: 2px solid green;
+        font-weight: bold;
+        border-radius: 10px;
+        align-items: center;
+        span {
+          border: 1px solid gray;
+          margin-left: 10px;
+          padding: 5px 10px;
+          color: gray;
+          font-size: 15px;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+}
+
+
+
+.mainLogin {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  align-items: baseline;
+  height: 100%;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: green;
+    padding: 70px;
+    margin-top: 200px;
+    font-family: 'Open Sans', sans-serif;
+
+
+    label {
+      display: block;
+      padding: 10px 30px;
+      font-size: 20px;
+      color: white;
+      border-top: 1px solid white;
+      border-left: 1px solid white;
+      border-right: 1px solid white;
+      width: 100%;
+      text-align: center;
+
+    }
+
+    button {
+      background: green;
+      border: none;
+      padding: 10px 30px;
+      cursor: pointer;
+      color: white;
+    }
+
+    input {
+      padding: 10px 30px;
+      background: white;
+      outline: none;
+      border: none;
+      background: lightblue;
+      margin-bottom: 20px;
+    }
+
+    p {
+      margin-top: 20px;
+      font-size: 13px;
+      color: gray;
+    }
+
+    span {
+      color: dodgerblue;
+    }
+  }
+
+  &__input-box {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    background: white;
+  }
+}
+
+.mainView {
+
+  .flex {
+    display: flex;
+    justify-content: space-evenly;
+
+    @media (max-width: 1000px) {
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__localization {
+    margin-top: 80px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    background: green;
+    color: white;
+    align-items: center;
+    border-radius: 8px;
+
+    h2, input, button {
+      margin-bottom: 20px;
+      outline: none;
+    }
+
+    input {
+      border-radius: 5px;
+      border: 1px solid white;
+      height: 45px;
+      width: 270px;
+      padding-left: 10px;
+      font-size: 18px;
+    }
+
+    .button {
+      font-size: 20px;
+      padding: 10px 30px;
+      color: white;
+      font-weight: 600;
+      background-color: dodgerblue;
+      cursor: pointer;
+      border: none;
+      border-radius: 4px;
+      text-decoration: none;
+    }
+  }
+}
